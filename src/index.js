@@ -17,6 +17,6 @@ render(App)
 // module replacement api use
 if (module.hot) {
   module.hot.accept('./App', () => {
-    render(App)
+    render(require('./App').default)
   })
 }
