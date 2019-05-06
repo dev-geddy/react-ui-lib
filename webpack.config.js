@@ -45,7 +45,7 @@ module.exports = {
         test: /\.svg$/,
         loaders: [
           'babel-loader',
-          'babel-svg-loader'
+          'react-svg-loader'
         ]
       }
     ]
@@ -54,7 +54,7 @@ module.exports = {
     setImmediate: false
   },
   output: {
-    filename: "[name]_[hash:base64:8].js",
+    filename: "[name].js",
     devtoolFallbackModuleFilenameTemplate: 'webpack:///' + pkg.name + '/[resource-path]?v=' + pkg.version + '#[hash]',
     devtoolModuleFilenameTemplate: 'webpack:///' + pkg.name + '/[resource-path]',
     path: path.join(__dirname, 'build'),
